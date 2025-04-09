@@ -23,6 +23,7 @@
 }
 
 /* Dark theme */
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -36,12 +37,12 @@
     --preformatted: #ccc;
     --disabled: #111;
   }
-  /* Add a bit of transparency so light media isn't so glaring in dark mode */
   img,
   video {
     opacity: 0.8;
   }
 }
+*/
 
 /* Reset box-sizing */
 *, *::before, *::after {
