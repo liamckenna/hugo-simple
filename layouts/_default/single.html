@@ -20,6 +20,12 @@
       {{ .TableOfContents }}
     </details>
   {{ end }}
+  {{ if .Params.directory }}
+    <details>
+      <summary>Directory</summary>
+      {{ .TableOfContents }} <!--Needs to be a new thing called Directory.-->
+    </details>
+  {{ end }}
   <content>
     {{ .Content }}
   </content>
