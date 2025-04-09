@@ -47,3 +47,40 @@ div.highlight pre,
 div.highlight pre span {
   color: inherit;
 }
+
+ul.directory-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.directory-list > li {
+  margin: 1rem 0;
+}
+
+details {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+details summary {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+details ul li a {
+  font-size: 1.75rem;
+  display: block;
+  margin: 1rem 0;
+}
+
+ol {
+  padding-left: 2rem;
+}
+
+ol li {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
