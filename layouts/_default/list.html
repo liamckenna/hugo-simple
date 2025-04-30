@@ -1,9 +1,10 @@
 {{ define "main" }}
   <content>
     {{ if .Data.Singular }}
-      <h3>Filtering for "{{ .Title }}"</h3>
+      <h3>{{ T "filtering_for" }} "{{ .Title }}"</h3>
       <small>
-        <a href="{{ relURL "blog" }}">Remove filter</a>
+        {{ $mainSection := index (.Site.MainSections) 0 }}
+        <a href="{{ relURL $mainSection }}">{{ T "remove_filter" }}</a>
       </small>
     {{ end }}
     {{ if or .Paginator.HasPrev .Paginator.HasNext }}
@@ -26,7 +27,7 @@
           {{ end }}
         </li>
       {{ else }}
-        <li>No posts yet</li>
+        <li>{{ T "no_posts" }}</li>
       {{ end }}
     </ul>
     {{ if not .Data.Singular }}
