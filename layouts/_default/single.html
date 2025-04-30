@@ -76,5 +76,30 @@
       {{ end }}
     </p>
   {{ end }}
+
+  
+  {{ $section := .Section }}
+  {{ $slug := .File.BaseFileName }}
+  {{ $comments := index site.Data.comments $section $slug }}
+
+  {{if not .Params.comments_disabled }}
+    {{ if $comments }}
+      <section class="comments-thread">
+        <h3>Comments</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+          {{ range $comments }}
+            <li>
+              <h4 style="margin-bottom: -1.5rem;">{{ .name }}</h4>
+              <p>{{ .message }}</p>
+            </li>
+          {{ end }}
+        </ul>      
+      </section>
+    {{ end }}
+
+    {{ partial "comment-form.html" . }}
+  
+  {{end}}
+
 {{ end }}
 
